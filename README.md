@@ -14,12 +14,17 @@ We first test the contract locally using the Hardhat network. The script `TestVo
 * Display results.
 
 ### Addresses
-MyERC20Vote: https://sepolia.etherscan.io/address/0x3a98975bf6f31a4989835174fe44defb76c7f1e6
-TokenizedBallot.sol: 
+[contract.config.json](./scripts/contract.config.json) contains the addresses of the deployed contracts on Sepolia testnet. Use this file to test the contract on Sepolia as you wish.
 
 Run the test script using: \
 `npx hardhat compile` and \
-`npx hardhat run ./scripts/TestVotesLocalNetwork.ts` 
+`npx hardhat run ./scripts/TestVotesLocalNetwork.ts` for local test.
+
+* Deployed TokenizedBallot contract
+  * `npx hardhat run scripts/deploy-tokenized-ballot.ts [proposals] [erc20Address] [targetBlock] --network sepolia`
+* View voting power for address 
+  * `npx hardhat voting-power [address] --network sepolia`
+//todo
 
 ### Known issues
 
