@@ -112,9 +112,6 @@ Winning proposal is #0, true with name: No Winner - TIE
   function:  vote(uint256 proposal, uint256 amount)
   args:          (0, 100000000000000000000)
   sender:    0xe6DdDcbb2848983D9cAaB715611849E579759CB0
-  
-  Docs: https://viem.sh/docs/contract/writeContract
-  Version: viem@2.21.43
 
 * `npx hardhat view-results --network sepolia`
 Proposal Votes Summary @ 0x6e8a64d918caf006c2230d00de2e02441d00a4a6
