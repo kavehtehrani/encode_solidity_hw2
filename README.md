@@ -86,26 +86,40 @@ Proposal Votes Summary @ 0x6e8a64d918caf006c2230d00de2e02441d00a4a6
 
 --------------------------------------------
 
-**Winning proposal is #0, true with name: No Winner - TIE**
+Winning proposal is #0, true with name: No Winner - TIE
 
 * `npx hardhat vote 2 4 --network sepolia`
   * Voting 4,000,000,000,000,000,000 wei for proposal 2
     Vote tx hash: 0xe9f3507fbb3ab97d115e7601abbf67eb3f35bf9d093e4aa9b0d53785d60965ab
 
+* `npx hardhat vote 0 0.5 --network sepolia`
+  * Voting 500,000,000,000,000,000 wei for proposal 0
+    Vote tx hash: 0xf2b9ca80fbfb20817188b287323124ba27f7501fb15314cc084b4b0087ddb532
+
+* `npx hardhat vote 0 100 --network sepolia`
+  * Voting 100,000,000,000,000,000,000 wei for proposal 0
+  Error: The contract function "vote" reverted with the following reason:
+  Error: trying to vote with more votes than available
+  Contract Call:
+  address:   0x6e8a64d918caf006c2230d00de2e02441d00a4a6
+  function:  vote(uint256 proposal, uint256 amount)
+  args:          (0, 100000000000000000000)
+  sender:    0xe6DdDcbb2848983D9cAaB715611849E579759CB0
+  
+  Docs: https://viem.sh/docs/contract/writeContract
+  Version: viem@2.21.43
+
 * `npx hardhat view-results --network sepolia`
 Proposal Votes Summary @ 0x6e8a64d918caf006c2230d00de2e02441d00a4a6
 
-| ID | Name           | Votes |
-|----|----------------|-------|
-| 0  | Vanilla        | 0 wei |
-| 1  | Chococlate     | 0 wei |
-| 2  | Salted Caramel | 0 wei |
-| 3  | Strawberry     | 0 wei |
-| 4  | Mint           | 0 wei |
+| ID | Name           | Votes                       |
+|----|----------------|-----------------------------|
+| 0  | Vanilla        | 500,000,000,000,000,000 wei|
+| 1  | Chococlate     | 0 wei                       |
+| 2  | Salted Caramel | 4,000,000,000,000,000,000 wei|
+| 3  | Strawberry     | 0 wei                       |
+| 4  | Mint           | 0 wei                       |
 
 --------------------------------------------
 
-**Winning proposal is #0, true with name: No Winner - TIE**
-```
-``
-`
+Winning proposal is #2,false with name: Salted Caramel
