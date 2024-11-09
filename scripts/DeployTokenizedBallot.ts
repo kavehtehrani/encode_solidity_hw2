@@ -1,5 +1,5 @@
 import { task } from "hardhat/config";
-import {  toHex } from "viem";
+import { toHex } from "viem";
 import * as dotenv from "dotenv";
 dotenv.config();
 import {
@@ -41,5 +41,7 @@ export default task("deploy-tokenized-ballot", "Deploy Tokenized Ballot")
 
 /*
 npx hardhat run scripts/deploy-tokenized-ballot.ts [proposals] [erc20Address] [targetBlock] --network sepolia
-e.g. npx hardhat deploy-tokenized-ballot "Vanilla,Chococlate,Salted Caramel,Strawberry,Mint" "0x3a98975bf6f31a4989835174fe44defb76c7f1e6" "7041067" --network sepolia
+e.g. npx hardhat deploy-tokenized-ballot "Vanilla,Chococlate,Salted Caramel,Strawberry,Mint" "0xcc73011fd7e2073a4aabdb95f9f19a2df4bd6cd6" "7043652" --network sepolia
+
+Put the address in the contract.config.json file in TokenizedBallot_address
 */

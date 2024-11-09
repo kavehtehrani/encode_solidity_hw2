@@ -7,6 +7,7 @@ import "./scripts/VotingPower.ts";
 import "./scripts/SelfDelegateVotes.ts";
 import "./scripts/DeployTokenizedBallot.ts";
 import "./scripts/ViewResults.ts";
+import "./scripts/Vote.ts";
 
 dotenv.config();
 const providerApiKey = process.env.ALCHEMY_API_KEY || "";

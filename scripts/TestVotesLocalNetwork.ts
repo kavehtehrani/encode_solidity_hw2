@@ -1,6 +1,6 @@
 import { viem } from "hardhat";
 import { parseEther, formatEther, toHex } from "viem";
-import proposalsJson from "./utils/proposals_test.json";
+import proposalsJson from "../config/proposalsTest.json";
 
 const MINT_VALUE = parseEther("10");
 const TARGET_BLOCK_NUMBER = 5n;
@@ -21,7 +21,7 @@ async function displayProposalsSummary(
   }
   console.log("--------------------------------------------");
 
-  const winningProposalId =
+  const [winningProposalId, _] =
     await contractTokenizedBallot.read.winningProposal();
   const winningProposalName = await contractTokenizedBallot.read.winnerName();
   console.log(
@@ -160,6 +160,14 @@ async function main() {
     `Voting power of ${
       acc2.account.address
     }: ${votingPowerAcc2.toLocaleString()}\n`
+  );
+
+  // Before any voting takes place
+  console.log("*** Proposals before any voting ***");
+  await displayProposalsSummary(
+    contractTokenizedBallot,
+    proposals,
+    proposalsJson
   );
 
   // Voting first round

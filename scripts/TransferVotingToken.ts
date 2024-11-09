@@ -2,10 +2,8 @@ import { task } from "hardhat/config";
 import { parseEther } from "viem";
 import * as dotenv from "dotenv";
 dotenv.config();
-import {
-  abi,
-} from "../artifacts/contracts/MyERC20Vote.sol/MyToken.json";
-import contractConfig from "./contract.config.json";
+import { abi } from "../artifacts/contracts/MyERC20Vote.sol/MyToken.json";
+import contractConfig from "../config/contract.config.json";
 import { setupClients } from "./utils/clientConfig";
 
 export default task("transfer-tokens", "Transfer tokens to vote")

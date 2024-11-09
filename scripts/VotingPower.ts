@@ -4,7 +4,7 @@ dotenv.config();
 import {
   abi,
 } from "../artifacts/contracts/MyERC20Vote.sol/MyToken.json";
-import contractConfig from "./contract.config.json";
+import contractConfig from "../config/contract.config.json";
 import { setupClients } from "./utils/clientConfig";
 
 export default task("voting-power", "Looking up voting power for an address")

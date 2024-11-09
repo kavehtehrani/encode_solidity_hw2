@@ -57,19 +57,37 @@ contract TokenizedBallot {
             votePowerSpent[voter];
     }
 
-    function winningProposal() public view returns (uint winningProposal_) {
+    function winningProposal()
+        public
+        view
+        returns (uint winningProposal_, bool hasTie)
+    {
         uint winningVoteCount = 0;
+        hasTie = false;
+
         for (uint p = 0; p < proposals.length; p++) {
             if (proposals[p].voteCount > winningVoteCount) {
                 winningVoteCount = proposals[p].voteCount;
                 winningProposal_ = p;
+                hasTie = false;
+            } else if (proposals[p].voteCount == winningVoteCount) {
+                hasTie = true;
             }
         }
 
-        return winningProposal_;
+        return (winningProposal_, hasTie);
     }
 
     function winnerName() external view returns (bytes32 winnerName_) {
-        winnerName_ = proposals[winningProposal()].name;
+        (uint winner, bool hasTie) = winningProposal();
+        if (hasTie) {
+            return bytes32("No Winner - TIE");
+        }
+        winnerName_ = proposals[winner].name;
+        return winnerName_;
+    }
+
+    function getProposalsCount() external view returns (uint256) {
+        return proposals.length;
     }
 }

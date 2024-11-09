@@ -1,26 +1,27 @@
 import { task } from "hardhat/config";
 import * as dotenv from "dotenv";
 dotenv.config();
-import {
-  abi,
-} from "../artifacts/contracts/TokenizedBallot.sol/TokenizedBallot.json";
-import contractConfig from "./contract.config.json";
+import { abi } from "../artifacts/contracts/TokenizedBallot.sol/TokenizedBallot.json";
+import contractConfig from "../config/contract.config.json";
 import { setupClients } from "./utils/clientConfig";
 
-export default task("voting-results", "Display voting results").setAction(
+export default task("view-results", "Display voting results").setAction(
   async () => {
     try {
       const { publicClient } = setupClients();
 
-      const contractAddress =
-        contractConfig.TokenizedBallot_icecream_flavors_address;
+      const contractAddress = contractConfig.TokenizedBallot_address;
       if (!contractAddress) {
         throw new Error(
           "TokenizedBallot address not provided and not found in config"
         );
       }
 
-      const proposalCount = contractConfig.proposals.length;
+      const proposalCount = (await publicClient.readContract({
+        address: contractAddress as `0x${string}`,
+        abi: abi,
+        functionName: "getProposalsCount",
+      })) as number;
 
       console.log(`\nProposal Votes Summary @ ${contractAddress}`);
       console.log("--------------------------------------------");
@@ -37,7 +38,9 @@ export default task("voting-results", "Display voting results").setAction(
         const proposalName = Buffer.from(
           contractConfig.proposals[Number(i)]
         ).toString();
-        console.log(`${i} | ${proposalName} | ${proposal[1]} wei`);
+        console.log(
+          `${i} | ${proposalName} | ${proposal[1].toLocaleString()} wei`
+        );
       }
       console.log("--------------------------------------------");
 
@@ -71,5 +74,5 @@ export default task("voting-results", "Display voting results").setAction(
 );
 
 /*
-npx hardhat voting-results --network sepolia
+npx hardhat view-results --network sepolia
 */

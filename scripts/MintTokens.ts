@@ -5,7 +5,7 @@ dotenv.config();
 import {
   abi,
 } from "../artifacts/contracts/MyERC20Vote.sol/MyToken.json";
-import contractConfig from "./contract.config.json";
+import contractConfig from "../config/contract.config.json";
 import { setupClients } from "./utils/clientConfig";
 
 export default task("mint-tokens", "Mint tokens to the MyERC20Vote contract")
@@ -40,5 +40,5 @@ export default task("mint-tokens", "Mint tokens to the MyERC20Vote contract")
   });
 
 /*
-npx hardhat mint-tokens [mint amount] --network sepolia
+npx hardhat mint-tokens [amount] --network sepolia
 */
