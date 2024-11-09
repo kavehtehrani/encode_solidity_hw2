@@ -50,6 +50,13 @@ Run the test script using: \
 
 ### Sample use to vote on ice cream flavors
 
+The addresses in tests below can be viewed here:
+ERC20Vote Token contract address: https://sepolia.etherscan.io/address/0xcc73011fd7e2073a4aabdb95f9f19a2df4bd6cd6
+
+TokenizedBallot contract address: https://sepolia.etherscan.io/address/0x6e8a64d918caf006c2230d00de2e02441d00a4a6
+
+### Commands run
+
 * `npx hardhat run scripts/DeployVoteToken.ts --network sepolia`
   * Deploying MyERC20Vote contract...
   Token contract deployed to: 0xcc73011fd7e2073a4aabdb95f9f19a2df4bd6cd6
