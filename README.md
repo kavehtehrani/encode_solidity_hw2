@@ -91,8 +91,6 @@ Proposal Votes Summary @ 0x6e8a64d918caf006c2230d00de2e02441d00a4a6
 | 3  | Strawberry     | 0 wei |
 | 4  | Mint           | 0 wei |
 
---------------------------------------------
-
 Winning proposal is #0, true with name: No Winner - TIE
 
 * `npx hardhat vote 2 4 --network sepolia`
@@ -124,7 +122,5 @@ Proposal Votes Summary @ 0x6e8a64d918caf006c2230d00de2e02441d00a4a6
 | 2  | Salted Caramel | 4,000,000,000,000,000,000 wei|
 | 3  | Strawberry     | 0 wei                       |
 | 4  | Mint           | 0 wei                       |
-
---------------------------------------------
 
 Winning proposal is #2,false with name: Salted Caramel
