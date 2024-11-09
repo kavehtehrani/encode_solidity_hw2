@@ -24,3 +24,4 @@ Run the test script using: \
 ### Known issues
 
 * In case of a tie, the first entry in the list of candidates is declared the winner. This is a limitation of the current implementation.
+* Would have been a better TokenizedBallot contract if we had made a function to query the length of the proposals. 
