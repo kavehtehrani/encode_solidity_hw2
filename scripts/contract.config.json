@@ -1,0 +1,12 @@
+{
+  "MyERC20Vote_address": "0x3a98975bf6f31a4989835174fe44defb76c7f1e6",
+  "TokenizedBallot_icecream_flavors_address": "0x9147098a1e06a96291f368e3db2838e170c31619",
+  "proposals": [
+    "Vanilla",
+    "Chococlate",
+    "Salted Caramel",
+    "Strawberry",
+    "Mint"
+  ]
+}
+

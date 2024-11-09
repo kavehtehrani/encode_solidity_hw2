@@ -1,6 +1,12 @@
 import { task, type HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox-viem";
 import * as dotenv from "dotenv";
+import "./scripts/MintTokens";
+import "./scripts/TransferVotingToken";
+import "./scripts/VotingPower.ts";
+import "./scripts/SelfDelegateVotes.ts";
+import "./scripts/DeployTokenizedBallot.ts";
+import "./scripts/ViewResults.ts";
 
 dotenv.config();
 const providerApiKey = process.env.ALCHEMY_API_KEY || "";

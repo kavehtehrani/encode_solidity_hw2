@@ -1,6 +1,6 @@
 import { viem } from "hardhat";
 import { parseEther, formatEther, toHex } from "viem";
-import proposalsJson from "../proposals.json";
+import proposalsJson from "./utils/proposals_test.json";
 
 const MINT_VALUE = parseEther("10");
 const TARGET_BLOCK_NUMBER = 5n;
@@ -34,7 +34,7 @@ async function displayProposalsSummary(
 
 async function main() {
   const publicClient = await viem.getPublicClient();
-  const [deployer, acc1, acc2] = await viem.getWalletClients();
+  const [_, acc1, acc2] = await viem.getWalletClients();
   const contractToken = await viem.deployContract("MyToken");
   console.log(`Token contract deployed at ${contractToken.address}\n`);
 
@@ -271,3 +271,5 @@ main().catch((err) => {
   console.error(err);
   process.exitCode = 1;
 });
+
+// run with: npx hardhat run ./scripts/TestVotesLocalNetwork.ts
