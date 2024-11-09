@@ -1,7 +1,7 @@
 # Encode Solidity Bootcamp 
 #### Group #9, HW #2
 
-## Local network testing
+## Local Network Testing
 
 We first test the contract locally using the Hardhat network. The script `TestVotesLocalNetwork.ts` deploys the contract, votes, and checks the results. It checks for the following actions:
 
@@ -22,7 +22,7 @@ Run the test script using: \
 `npx hardhat compile` and \
 `npx hardhat run ./scripts/TestVotesLocalNetwork.ts` for local test.
 
-## Sepolia testnet
+## Sepolia Testnet
 ### ERC20Vote Token
 * Deploying ERC20Vote token
   * `npx hardhat run scripts/DeployVoteToken.ts --network sepolia`
@@ -48,7 +48,7 @@ Run the test script using: \
 * We have used the 1-to-1 ratio of the ERC20Vote token to ETH. This means that 1 ERC20Vote token is equal to 1 ETH in voting power.
 * In case of a tie, there will be no winner declared and winningProposalName() will return "No Winner - TIE".
 
-### Sample use to vote on ice cream flavors
+## Sample use to vote on ice cream flavors
 
 The addresses in tests below can be viewed here:
 ERC20Vote Token contract address: https://sepolia.etherscan.io/address/0xcc73011fd7e2073a4aabdb95f9f19a2df4bd6cd6
