@@ -114,6 +114,7 @@ Winning proposal is #0, true with name: No Winner - TIE
   sender:    0xe6DdDcbb2848983D9cAaB715611849E579759CB0
 
 * `npx hardhat view-results --network sepolia`
+
 Proposal Votes Summary @ 0x6e8a64d918caf006c2230d00de2e02441d00a4a6
 
 | ID | Name           | Votes                       |
