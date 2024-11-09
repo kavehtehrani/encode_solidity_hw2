@@ -48,6 +48,7 @@ Run the test script using: \
 * We have used the 1-to-1 ratio of the ERC20Vote token to ETH. This means that 1 ERC20Vote token is equal to 1 ETH in voting power.
 * In case of a tie, there will be no winner declared and winningProposalName() will return "No Winner - TIE".
 
+___
 ## Sample use to vote on ice cream flavors
 
 The addresses in tests below can be viewed here:
