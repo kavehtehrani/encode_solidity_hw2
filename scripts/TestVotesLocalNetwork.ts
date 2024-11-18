@@ -250,7 +250,8 @@ async function main() {
     console.log("Vote succeeded - this should not happen!\n");
   } catch (error) {
     console.log(
-      "Vote failed as expected: trying to vote with more votes than available\n"
+      "Vote failed as expected: trying to vote with more votes than available\n",
+        error
     );
   }
 
