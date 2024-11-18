@@ -1,6 +1,6 @@
 {
-  "MyERC20Vote_address": "0xcc73011fd7e2073a4aabdb95f9f19a2df4bd6cd6",
-  "TokenizedBallot_address": "0x6e8a64d918caf006c2230d00de2e02441d00a4a6",
+  "MyERC20Vote_address": "0xa58d7a0636135073f38cc45e166f6f518622838c",
+  "TokenizedBallot_address": "0x6d08d3a93bce4cec4b27eb93307589bfecc42525",
   "proposals": [
     "Vanilla",
     "Chococlate",

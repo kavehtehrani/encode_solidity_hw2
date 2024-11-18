@@ -45,7 +45,14 @@ contract TokenizedBallot {
         uint256 votingPower = getVotingPower(msg.sender);
         require(
             votingPower >= amount,
-            "Error: trying to vote with more votes than available"
+            string.concat(
+                "Insufficient voting power. Account: ",
+                Strings.toHexString(uint160(msg.sender), 20),
+                " Has: ",
+                Strings.toString(votingPower),
+                " Requested: ",
+                Strings.toString(amount)
+            )
         );
         votePowerSpent[msg.sender] += amount;
         proposals[proposal].voteCount += amount;
