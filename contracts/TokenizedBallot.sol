@@ -41,6 +41,10 @@ contract TokenizedBallot {
         }
     }
 
+    function setTargetBlockNumber(uint256 _newBlockNumber) external {
+        targetBlockNumber = _newBlockNumber;
+    }
+
     function vote(uint proposal, uint amount) external {
         uint256 votingPower = getVotingPower(msg.sender);
         require(

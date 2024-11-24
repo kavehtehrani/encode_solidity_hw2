@@ -31,7 +31,7 @@ Run the test script using: \
 * Transferring tokens 
   * `npx hardhat transfer-tokens [address] [amount] --network sepolia`
 * Self-delegating voting power
-  * `npx hardhat self-delegate --network sepolia`
+  * `npx hardhat self-delegate [address] --network sepolia`
 * View voting power for address
   * `npx hardhat voting-power [address] --network sepolia`
 
