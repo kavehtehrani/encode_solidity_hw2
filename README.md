@@ -1,5 +1,5 @@
 # Encode Solidity Bootcamp 
-#### Group #9, HW #3
+#### HW #3
 
 ## Local Network Testing
 
